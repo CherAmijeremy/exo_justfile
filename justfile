@@ -13,6 +13,9 @@ status:
 add:
 	git add .
 
+push:
+	git push
+	
 commit message:
 	git commit -m "{{message}}"
 
