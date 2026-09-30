@@ -1,16 +1,20 @@
-name: Commit success !
+name: Python Commit
 
 on:
-    Commit:
+  push:
 
 jobs:
-    python:
-        runs-on: ubuntu-latest
+  python:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Recup le dossier
-              uses: actions/checkout@v4
+    steps:
+      - name: Récupérer le repository
+        uses: actions/checkout@v4
 
-            - name: Lancer le script 
-              run: python scripts/commit.py
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
+      - name: Lancer le script
+        run: python scripts/commit.py
