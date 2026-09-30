@@ -1,0 +1,16 @@
+name: Commit success !
+
+on:
+    Commit:
+
+jobs:
+    python:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Recup le dossier
+              uses: actions/checkout@v4
+
+            - name: Lancer le script 
+              run: python scripts/commit.py
+
