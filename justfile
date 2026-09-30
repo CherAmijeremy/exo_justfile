@@ -1,3 +1,6 @@
+default:
+	@just --list
+
 hello:
 	echo "Hello world!"
 
@@ -18,3 +21,6 @@ log:
 
 clean:
 	rm -f tmp.txt
+
+SQL:
+	mysql -u CherAmi 
